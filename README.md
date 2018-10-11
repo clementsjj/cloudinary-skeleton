@@ -8,6 +8,7 @@ This skeleton is barebones and has no layout framework.
 ### Setup
 1. Sign up for a cloudinary account.
 2. Create a directory and file called  /src/api_key/api_keys.js with two variables (provided by Cloudinary) as follows:
+
 Terminal:
 ```bash
 mkdir /src/api_key
@@ -20,14 +21,20 @@ export const unsignedKey = 'whatever-key-from-Cloudify';
 ```
 3. Ensure that the api_keys.js file is imported to app.js and that the varialbe names synch with the URL calls. It should work fine as provided.
 
-4. In app.js under the componentDidMount function, the get call will bring in pictures based on the tag specified as the json file. By default, photos uploaded will have the tag "hamster" as dictated in `uploadWidget = () => {
+4. In app.js under the componentDidMount function, the get call will bring in pictures based on the tag specified as the json file: 
+```javascript
+axios
+      .get(`http://res.cloudinary.com/${cloudName}/image/list/hamster.json`)
+``` 
+By default, photos uploaded will have the tag "hamster" as dictated in `uploadWidget = () => {
     window.cloudinary.openUploadWidget(
       {
         cloud_name: cloudName,
         upload_preset: unsignedKey,
         tags: ['hamster']
       }`
+You can change the tags in the Cloudify dashboard. 
    
 
 ### Issues
-I had some issues originally with the axios call to load available pictures
+I had some issues originally with the axios call to load available pictures, for no particular reason that I could discern. I kept changing the URL (to nothing particularly new), and all I can say is that it works at time of upload using Firefox... 
