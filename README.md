@@ -1,11 +1,11 @@
-### About
+## About
 This is a simple skeleton project that uses Cloudinary as a server for images. 
 
 You can upload images to you Clourdinary account; using an Axios call, you can display photos that you have uploaded to Cloudinary.
 
 This skeleton is barebones and has no layout framework.
 
-### Setup
+## Setup
 1. Sign up for a cloudinary account.
 2. Create a directory and file called  /src/api_key/api_keys.js with two variables (provided by Cloudinary) as follows:
 
@@ -36,5 +36,5 @@ By default, photos uploaded will have the tag "hamster" as dictated in `uploadWi
 You can change the tags in the Cloudify dashboard. 
    
 
-### Issues
+## Issues
 I had some issues originally with the axios call to load available pictures, for no particular reason that I could discern. I kept changing the URL (to nothing particularly new), and all I can say is that it works at time of upload using Firefox... 
